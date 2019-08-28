@@ -9,7 +9,7 @@
 //paselectinus norimas eilutes ir CTRL + K + U jas visas atkomentuoja (windows)
 ```
 
-###Kintamieji
+### Kintamieji
 
 1.  Parašyti programą, kuri prašo įvesti apskritimo spindulį ir pagal jį suskaičiuoja jo ilgį ir plotą.
 ```c# 
