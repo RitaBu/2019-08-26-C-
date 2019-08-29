@@ -108,6 +108,47 @@ if(metai >= pirmosOlimpines)
 7. Gamtininkas registruoja likusius žiemoti paukščius. Jo tikslas yra nustatyti, kurios iš trijų paukščių rūšių atstovų liko žiemoti daugiausia. Klaviatūra įvedami trijų paukščių rūšių kiekiai, parašykite programą, kuri surikiuotų juos iš eilės nuo didžiausio iki mažiausio ir apskaičiuotų, kiek skiriasi didžiausias ir mažiausias kiekiai. Pvz.: Įvesti kiekiai - 1000 1500 1800, Atsakymas - 1800 1500 1000; Skirtumas tarp didžiausio ir mažiausio kiekio 800.
 
 ```c#
+Console.WriteLine("Įveskite pirmos rūšies paukščių skaičių:");
+int pirmosRusiesSk = int.Parse(Console.ReadLine());
+Console.WriteLine("Įveskite antros rūšies paukščių skaičių:");
+int antrosRusiesSk = int.Parse(Console.ReadLine());
+Console.WriteLine("Įveskite trecios rūšies paukščių skaičių:");
+int treciosRusiesSk = int.Parse(Console.ReadLine());
+
+
+if (pirmosRusiesSk > antrosRusiesSk && pirmosRusiesSk > treciosRusiesSk)
+{
+    if (antrosRusiesSk > treciosRusiesSk)
+    {
+        Console.WriteLine($"{pirmosRusiesSk} {antrosRusiesSk} {treciosRusiesSk}");
+    }
+    else
+    {
+        Console.WriteLine($"{pirmosRusiesSk} {treciosRusiesSk} {antrosRusiesSk}");
+    }
+}
+if (antrosRusiesSk > pirmosRusiesSk && antrosRusiesSk > treciosRusiesSk)
+{
+    if (pirmosRusiesSk > treciosRusiesSk)
+    {
+        Console.WriteLine($"{antrosRusiesSk} {pirmosRusiesSk} {treciosRusiesSk}");
+    }
+    else
+    {
+        Console.WriteLine($"{antrosRusiesSk} {treciosRusiesSk} {pirmosRusiesSk}");
+    }
+}
+if (treciosRusiesSk > pirmosRusiesSk && treciosRusiesSk > antrosRusiesSk)
+{
+    if (pirmosRusiesSk > antrosRusiesSk)
+    {
+        Console.WriteLine($"{treciosRusiesSk} {pirmosRusiesSk} {antrosRusiesSk}");
+    }
+    else
+    {
+        Console.WriteLine($"{treciosRusiesSk} {antrosRusiesSk} {pirmosRusiesSk}");
+    }
+}
 ```
 
 ### ```while``` ciklas
