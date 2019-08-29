@@ -176,6 +176,79 @@ if (treciosRusiesSk > pirmosRusiesSk && treciosRusiesSk > antrosRusiesSk)
 }
 ```
 
+### ```switch```
+
+1. Perrašykite kalkuliatorių su switch vietoj sąlygų if/else.
+
+```c# 
+Console.WriteLine("Iveskite pirma skaiciu: ");
+int skaicius1 = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Iveskite operacija:");
+string operacija = Console.ReadLine();
+
+Console.WriteLine("Iveskite antra skaiciu:");
+int skaicius2 = int.Parse(Console.ReadLine());
+
+switch(operacija){
+    case "+":
+        Console.WriteLine($"{skaicius1} + {skaicius2} = {skaicius1 + skaicius2}");
+        break;
+    case "-":
+        Console.WriteLine($"{skaicius1} - {skaicius2} = {skaicius1 - skaicius2}");
+        break;
+    case "*":
+        Console.WriteLine($"{skaicius1} * {skaicius2} = {skaicius1 * skaicius2}");
+        break;
+    case "/":
+        Console.WriteLine($"{skaicius1} / {skaicius2} = {skaicius1 / skaicius2}");
+        break;
+    case "%":
+        Console.WriteLine($"{skaicius1} % {skaicius2} = {skaicius1 % skaicius2}");
+        break;
+    case "^":
+        Console.WriteLine($"{skaicius1} ^ {skaicius2} = {Math.Pow(skaicius1, skaicius2)}");
+        break;
+    default:
+        Console.WriteLine("Nesuprantu tokios operacijos.");
+        break;
+}
+```
+
+2. Parašyti programą, kuri prašo įvesti mokinio pažymį ir ekrane išspausdina jo apibūdinimą. (10 – puiku, 9-8 – labai gerai, 7-6- gerai, 5 - vidutiniškai, 4 – bent teigiamas, 3-2-1 – labai blogai)
+
+```c#
+Console.WriteLine("Iveskite vaiko pazymi:");
+var pazymys = int.Parse(Console.ReadLine());
+
+switch(pazymys) 
+{
+  case 10:
+    Console.WriteLine("Puiku!");
+    break;
+  case 9:
+  case 8:
+    Console.WriteLine("Laba gerai");
+    break;
+  case 7:
+  case 6:
+    Console.WriteLine("Gerai");
+    break;
+  case 5:
+    Console.WriteLine("Vidutiniškai");
+    break;
+  case 4:
+    Console.WriteLine("Teigiamas");
+    break;
+  case 3: case 2: case 1: //kad uzimtu maziau vietos, galime case surasyt i viena eilute sitaip
+    Console.WriteLine("Labai blogai!");
+    break;
+  default:
+    Console.WriteLine("Tokio pazymio nera vertinimo sistemoje.");
+    break;
+}
+```
+
 ### ```while``` ciklas
 
 1. Parašykite programą naudojant while ciklą, kuri išvestų 10 pirmų natūraliųjų skaičių.
