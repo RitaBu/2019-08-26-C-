@@ -9,6 +9,31 @@
 Parašykite programą, kuri padėtų Laurynui pasitikrinti, ar jis teisingai skaičiuoja x reikšmę spręsdamas kiekvieno varianto užduotį.
 
 ```c#
+ Console.WriteLine("Įveskite skaičių a:");
+ int a = int.Parse(Console.ReadLine());
+
+ Console.WriteLine("Įveskite skaičių b:");
+ int b = int.Parse(Console.ReadLine());
+
+ Console.WriteLine("Įveskite varianto numerį:");
+ int numeris = int.Parse(Console.ReadLine());
+
+ if (numeris == 1)
+ {
+     Console.WriteLine("x = ab+3 = " + (a * b + 3));
+ }
+ else if (numeris == 2)
+ {
+     Console.WriteLine("x = 2a + b = " + (2 * a + b));
+ }
+ else if (numeris == 3)
+ {
+     Console.WriteLine("x = a - 3b = " + (a - 3 * b));
+ }
+ else
+ {
+     Console.WriteLine("Tokio varianto nėra.");
+ }
 ```
 ---------------------
 
