@@ -110,4 +110,47 @@ if(metai >= pirmosOlimpines)
 ```c#
 ```
 
-### while ciklas
+### ```while``` ciklas
+
+1. Parašykite programą naudojant while ciklą, kuri išvestų 10 pirmų natūraliųjų skaičių.
+
+```c#
+int i = 1;
+while(i <= 10) 
+{
+  Console.WriteLine(i);
+  i++;
+}
+Console.ReadLine();
+```
+
+2. Parašyti programą naudojant `while` ciklą, kuri nuskaitinėja įvestus skaičius tol, kol jų suma nėra daugiau 50.
+
+```c#
+int sum = 0;
+while(sum < 50) 
+{
+  int number = int.Parse(Console.ReadLine());
+  sum += number;
+  Console.WriteLine($"suma: {sum} ");
+}
+Console.ReadLine();
+```
+
+3. Sukurkite programą naudojant while ciklą, kuri apskaičiuotų dvejeto laipsnį 2n, kuris yra ne didesnis už teigiamą sveikąjį skaičių a. 
+Pvz.: Jei a = 20, tai turi būti išvesta 16. Jei a = 1024, tai turi būti išvesta 1024.
+
+```c#
+Console.WriteLine("Iveskite skaiciu: ");
+int sk = int.Parse(Console.ReadLine());
+
+int laipsnis = 0;
+while(sk > 1) 
+{
+  sk = sk / 2; //arba sk/=2;
+  laipsnis++;
+}
+
+Console.WriteLine(Math.Pow(2, laipsnis));
+Console.ReadLine();
+```
