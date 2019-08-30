@@ -226,6 +226,13 @@ Console.WriteLine("Nelyginių skaičių suma intervale yra: " + nelyginiuSkSuma)
 11. Parašyti programą, kuri nuskaitinėja įvestus skaičius tol, kol jų suma nėra daugiau už 50.
 
 ```c#
-
+int sum = 0;
+while(sum < 50) 
+{
+  int number = int.Parse(Console.ReadLine());
+  sum += number;
+  Console.WriteLine($"suma: {sum} ");
+}
+Console.ReadLine();
 ```
 
