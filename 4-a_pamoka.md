@@ -53,7 +53,24 @@ else
 3. Parduotuvė parduoda saldainius po 0.28 euro centų už vienetą. Perkant daugiau kaip už 1000 eurų taikoma 3 % nuolaida, daugiau kaip už 2000 eurų - 4 % nuolaida. Kiek eurų kainuos N saldainių? (N įveda vartotojas)
 
 ```c#
+Console.WriteLine("Iveskite saldainių kiekį");
+int saldainiuSk = int.Parse(Console.ReadLine());
 
+double vienetoKaina = 0.28;
+double suma = saldainiuSk * vienetoKaina;
+
+if(suma > 1000 && suma <= 1999)
+{
+    suma = suma * 0.97;
+}
+else if(suma >= 2000)
+{
+    suma = suma * 0.96;
+}
+
+Console.WriteLine("Jums reikia sumokėti " + suma + " eurų.");
 ```
 
 ### ```while``` ciklas
+
+
