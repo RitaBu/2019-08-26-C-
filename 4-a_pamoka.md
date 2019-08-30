@@ -73,4 +73,159 @@ Console.WriteLine("Jums reikia sumokėti " + suma + " eurų.");
 
 ### ```while``` ciklas
 
+1. Parašykite programą, kuri išvestų į ekraną 5 kartus tą patį žodį.
+
+```c#
+int i = 1;
+
+while(i <= 5)
+{
+    Console.WriteLine("Labas");
+    i++;
+}
+```
+
+2. Parašykite programą, kuri išvestų 10 pirmų natūraliųjų skaičių.
+
+```c#
+int i = 1;
+
+while(i <= 10)
+{
+    Console.WriteLine(i);
+    i++;
+}
+```
+
+3. Parašykite programą, kuri išvestų 10 pirmų natūraliųjų skaičių atvirkščiai mažėjančia tvarka.
+
+```c#
+int i = 10;
+
+while(i >= 1)
+{
+    Console.WriteLine(i);
+    i--;
+}
+```
+
+4. Parašykite programą, kuri paprašo įvesti skaičių x ir išveda skaičius nuo 1 iki x.
+
+```c#
+Console.WriteLine("Įveskite skaičių:");
+var x = int.Parse(Console.ReadLine());
+
+int i = 1;
+
+while(i <= x)
+{
+    Console.WriteLine(i);
+    i++;
+}
+```
+
+5. Parašykite programą, kuri paprašo įvesti skaičių x ir išveda skaičius nuo x iki 1 (mažėjančia tvarka).
+
+```c#
+Console.WriteLine("Įveskite skaičių:");
+var x = int.Parse(Console.ReadLine());
+
+while(x >= 1)
+{
+    Console.WriteLine(i);
+    x--;
+}
+```
+
+6. Parašykite programą, kuri prašo įvesti du skaičius - m ir n, ir atspausdina visus sveikus skaičius [m; n] intervale.
+
+```c#
+Console.WriteLine("Įveskite skaičių m:");
+var m = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Įveskite skaičių n:");
+var n = int.Parse(Console.ReadLine());
+
+while(m <= n)
+{
+    Console.WriteLine(m);
+    m++;
+}
+```
+
+7. Parašykite programą, kuri paprašo įvesti skaičių ir atspausdina jo daugybos lentelę.
+
+```c#
+Console.WriteLine("Įveskite skaičių:");
+var sk = int.Parse(Console.ReadLine());
+
+int i = 1;
+
+while(i <= 10)
+{
+    Console.WriteLine(sk + "x" + i + "=" + sk*i);
+    i++;
+}
+```
+
+8. Parašykite programą, kuri paprašo įvesti skaičių x ir paskaičiuoja, kiek yra lyginių skaičių [1; x] intervale.
+
+```c#
+Console.WriteLine("Įveskite skaičių:");
+var x = int.Parse(Console.ReadLine());
+
+int i = 1;
+int lyginiuSk = 0;
+
+while(i <= x)
+{
+    if(i % 2 == 0)
+    {
+        lyginiuSk++;
+    }
+    i++;
+}
+
+Console.WriteLine("Intervale rasta tiek lyginių skaičių: " + lyginiuSk);
+```
+
+9. Parašykite programą, kuri paskaičiuoja pirmų 10-ies natūraliųjų skaičių sumą.
+
+```c#
+int i = 1;
+int suma = 0;
+
+while(i <= 10)
+{
+    suma = suma + i;
+}
+
+Console.WriteLine("Pirmų 10-ies natūraliųjų skaičių suma yra: " + suma);
+```
+
+10. Parašykite programą, kuri paprašo įvesti skaičių x ir paskaičiuoja nelyginių skaičių sumą [1; x] intervale.
+
+```c#
+Console.WriteLine("Įveskite skaičių:");
+var x = int.Parse(Console.ReadLine());
+
+int i = 1;
+int nelyginiuSkSuma = 0;
+
+while(i <= x)
+{
+    if(i % 2 != 0)
+    {
+        nelyginiuSkSuma = nelyginiuSkSuma + i;
+    }
+}
+
+Console.WriteLine("Nelyginių skaičių suma intervale yra: " + nelyginiuSkSuma);
+```
+
+11. Parašyti programą, kuri nuskaitinėja įvestus skaičius tol, kol jų suma nėra daugiau už 50.
+
+```c#
+
+```
 
