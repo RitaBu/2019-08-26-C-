@@ -198,6 +198,7 @@ int suma = 0;
 while(i <= 10)
 {
     suma = suma + i;
+    i++;
 }
 
 Console.WriteLine("Pirmų 10-ies natūraliųjų skaičių suma yra: " + suma);
@@ -218,6 +219,7 @@ while(i <= x)
     {
         nelyginiuSkSuma = nelyginiuSkSuma + i;
     }
+    i++;
 }
 
 Console.WriteLine("Nelyginių skaičių suma intervale yra: " + nelyginiuSkSuma);
