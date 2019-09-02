@@ -24,7 +24,22 @@ else Console.WriteLine("Bilietas nelaimingas. Bandykite dar karta.");
 2. Petras išėjo iš namų, kai laikrodis rodė v1 valandų ir m1 minučių. Į gimnaziją Petro kelionė trunka m2 minučių. Parašykite programą, kuri ekrane parodytų pranešimą apie tai, ar Petras nepavėluos į pamoką, prasidedančią v valandų ir m minučių.
 
 ```c#
+int v1 = 7;
+int m1 = 30;
 
+int m2 = 40;
+
+int v = 8;
+int m = 0;
+
+if (v1 * 60 + m1 + m2 > v * 60 + m)
+{
+    Console.WriteLine("Paveluos!");
+}
+else
+{
+    Console.WriteLine("Nepaveluos");
+}
 ```
 
 3. Kai kurie keturženkliai skaičiai turi tokią savybę, (30+25)2=3025. Nustatykite, ar keturženklis skaičius N turi šią savybę.
