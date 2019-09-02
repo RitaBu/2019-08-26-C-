@@ -90,7 +90,22 @@ Console.WriteLine(tNr);
 Pasitikrinkite. Kai n = 5, m = 6, s = 12, tai turi būti išvesta 4. Kai n = 1, m = 1, s = 10, tai turi būti išvesta 7. Kai n = 8, m = 10, s = 25, tai turi būti išvesta 4.
 
 ```c#
+int n = 5; //pirmo sklypo plotas hektarais
+int m = 6; //antro sklypo plotas hektarais
+int s = 12; //tikrinsim, kada plotas virsys tiek hektaru
 
+int paskutinioSklypoPlotas = 0;
+int paskutinioSklypoNr = 2;
+
+while (paskutinioSklypoPlotas <= s)
+{
+    paskutinioSklypoNr++;
+    paskutinioSklypoPlotas = n + m;
+    n = m;
+    m = paskutinioSklypoPlotas;
+}
+
+Console.WriteLine(paskutinioSklypoNr);
 ```
 
 ### ```for```
