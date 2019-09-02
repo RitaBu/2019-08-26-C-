@@ -21,7 +21,8 @@
 ```Skaičius = 1, kubas = 1
 Skaičius = 2, kubas = 8
 Skaičius = 3, kubas = 27
-...```
+...
+```
 
 ```c#
 ```
@@ -42,7 +43,8 @@ Pasitikrinkite. Kai n = 5, m = 6, s = 12, tai turi būti išvesta 4. Kai n = 1, 
 1. Parašykite programą, kuri šimtą kartų atspausdina tą pačią frazę kartu su jos eilės numeriu, pvz.:
 ```Labas
 Labas
-Labas Ir t.t.```
+Labas Ir t.t.
+```
 
 ```c#
 ```
