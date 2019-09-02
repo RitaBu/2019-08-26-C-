@@ -70,12 +70,27 @@ while (i <= x)
 2. Slidininkas treniruotis pradėjo nušliuoždamas a km nuotolį. Kiekvieną kitą treniruotę jis įveikdavo b km daugiau. Parašykite programą, nurodančią kurią, treniruotę nušliuožtas nuotolis viršys c km. Pasitikrinkite. Jei a = 1, b = 1, c = 10, tai turi būti išvesta: 6. Jei a = 2, b = 3, c = 10, tai turi būti išvesta 4.
 
 ```c#
+int a = 1; //pirma diena nuvaziuos toki atstuma
+int b = 1; //kiekviena diena nuvaziuos b km toliau
+int c = 10; //tikrinam, kada pasieks c atstuma
+int tNr = 0; //treniruociu skaicius
+
+var atstumas = 0;
+
+while(atstumas < c)
+{
+    tNr++;
+    atstumas = a + b * (tNr - 1);
+}
+
+Console.WriteLine(tNr);
 ```
 
 3. Gobšus žemių savininkas pradėjo supirkinėti žemę. Pirmojo jo pirkto sklypo plotas – n hektarų, antrojo – m hektarų. Toliau žemvaldžio apetitas pradėjo augti. Trečiojo sklypo plotas buvo lygus pirmojo ir antrojo sklypų plotų sumai, ketvirtojo plotas – antrojo ir trečiojo plotų sumai ir t.t. Sudarykite programą, nustatančią, kelinto gobšuolio sklypo plotas viršys s hektarų. 
 Pasitikrinkite. Kai n = 5, m = 6, s = 12, tai turi būti išvesta 4. Kai n = 1, m = 1, s = 10, tai turi būti išvesta 7. Kai n = 8, m = 10, s = 25, tai turi būti išvesta 4.
 
 ```c#
+
 ```
 
 ### ```for```
