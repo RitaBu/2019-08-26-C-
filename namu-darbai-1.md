@@ -55,7 +55,16 @@ Skaičius = 3, kubas = 27
 ```
 
 ```c#
+Console.WriteLine("Iveskite skaiciu:");
+int x = int.Parse(Console.ReadLine());
 
+int i = 1;
+
+while (i <= x)
+{
+    Console.WriteLine("Skaičius = " + i + ", Kubas = " + i*i*i);
+    i++;
+}
 ```
 
 2. Slidininkas treniruotis pradėjo nušliuoždamas a km nuotolį. Kiekvieną kitą treniruotę jis įveikdavo b km daugiau. Parašykite programą, nurodančią kurią, treniruotę nušliuožtas nuotolis viršys c km. Pasitikrinkite. Jei a = 1, b = 1, c = 10, tai turi būti išvesta: 6. Jei a = 2, b = 3, c = 10, tai turi būti išvesta 4.
@@ -78,14 +87,41 @@ Pasitikrinkite. Kai n = 5, m = 6, s = 12, tai turi būti išvesta 4. Kai n = 1, 
 ```
 
 ```c#
+for (int i = 1; i <= 100; i++)
+{
+    Console.WriteLine(i + ") Labas");
+}
 ```
 
 2. Parašykite programą, kuri išves kas trečią skaičių nuo 1 iki 30.
 
 ```c#
+for (int i = 1; i <= 30; i = i + 3)
+{
+    Console.WriteLine(i);
+}
 ```
 
 3. Kiekvieną dieną Petriukas, eidamas į mokyklą, skaičiuoja kiekvieną savo žingsnį ir žaidžia tokį žaidimą: kai žingsnių skaičius baigiasi nuliu, Petriukas suploja rankomis, o kai penketu - spragteli pirštais. Parašykite programą, kuri suskaičiuotų, kiek kartų Petriukas suplos rankomis ir kiek – spragtels pirštais, jei jam iki mokyklos yra lygiai n žingsnių.
 
 ```c#
+int n = 150;
+
+var spragtelejimuSk = 0;
+var suplojimuSk = 0;
+
+for (int i = 1; i <= n; i++)
+{
+    if(i % 10 == 0)
+    {
+        suplojimuSk++;
+    }
+    else if( i % 5 == 0)
+    {
+        spragtelejimuSk++;
+    }
+}
+
+Console.WriteLine("Spragtels " + spragtelejimuSk + " kartu.");
+Console.WriteLine("Suplos " + suplojimuSk + " kartu.");
 ```
