@@ -217,4 +217,51 @@ Console.WriteLine("Skaiciaus " + n + " faktorialas: " + faktorialas);
 8. Parašykite programą, kuri suskaičiuotų, kiek yra triženklių skaičių, besidalinančių iš keturių ir išvestų juos į ekraną.
 
 ```c#
+int dalinasiIs4 = 0;
+
+for (int i = 100; i <= 999; i++)
+{
+    if(i % 4 == 0)
+    {
+        dalinasiIs4++;
+    }
+}
+
+Console.WriteLine(dalinasiIs4 + " trizenkliai skaiciai dalinasi is 4-iu.");
+```
+
+#### Papildomos užduotys
+
+9. Architektas suprojektavo salę, kurioje bus n eilių. Pirmoje eilėje stovės k kėdžių, o kiekvienoje kitoje – 2 kėdėmis daugiau, negu prieš tai buvusioje. Parašykite programą, kuri apskaičiuotų, kiek iš viso kėdžių s reikia užsakyti, kad architekto sumanymas būtų įgyvendintas.
+Pvz., kai n = 3, o k = 8, turi būti išvesta: Reikia užsakyti s = 30 kėdžių.
+
+```c#
+int n = 3;
+int k = 8;
+int s = 0;
+
+for (int i = 1; i <= n; i++)
+{
+    s = s + k + 2*(i - 1);
+}
+
+Console.WriteLine("Reikes kedziu: " + s);
+```
+
+10. Keliamieji metai turi 366 dienas, paprastieji – 365.  Jeigu metai nėra šimtmečio metai, jie yra keliamieji, jeigu dalosi iš 4; Jeigu metai yra šimtmečio metai, jie yra keliamieji, jeigu dalosi iš 400 (pvz., 2000 ir 2400 metai yra keliamieji, o 2100, 2200, 2300 metai – ne keliamieji). Parašykite programą, kuri ekrane parodytų keliamuosius metus laikotarpio, kuris prasideda m-aisiais, o baigiasi n-aisiais metais. 
+Pvz., kai m = 1898, o n = 1910, tai turi būti išvesta: Keliamieji metai yra 1904, 1908.
+
+```c#
+int m = 1898;
+int n = 1910;
+
+Console.WriteLine("Keliamieji metai yra:");
+
+for (int i = m; i <= n; i++)
+{
+    if((i % 100 == 0 && i % 400 == 0) || (i % 100 != 0 && i % 4 == 0))
+    {
+        Console.WriteLine(i);
+    }
+}
 ```
