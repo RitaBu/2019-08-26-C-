@@ -3,16 +3,46 @@
 1. Loterijos bilietą sudaro šešiaženklis numeris. Loterijoje laimi tas bilietas, kurio numerio skaitmenų suma dalosi iš 4. Nustatykite, ar loterijos bilietas yra laimingas.
 
 ```c#
+int loterijosBilietoNr = 123456;
+
+int pirmasSk = loterijosBilietoNr / 100000;
+int antrasSk = loterijosBilietoNr % 100000 / 10000;
+int treciasSk = loterijosBilietoNr % 10000 / 1000;
+int ketvirtasSk = loterijosBilietoNr % 1000 / 100;
+int penktasSk = loterijosBilietoNr % 100 / 10;
+int sestasSk = loterijosBilietoNr % 10;
+
+int skaitmenuSuma = pirmasSk + antrasSk + treciasSk + ketvirtasSk + penktasSk + sestasSk;
+
+if(skaitmenuSuma % 4 == 0)
+{
+    Console.WriteLine("Valioooo! Bilietas yra laimingas!");
+}
+else Console.WriteLine("Bilietas nelaimingas. Bandykite dar karta.");
 ```
 
 2. Petras išėjo iš namų, kai laikrodis rodė v1 valandų ir m1 minučių. Į gimnaziją Petro kelionė trunka m2 minučių. Parašykite programą, kuri ekrane parodytų pranešimą apie tai, ar Petras nepavėluos į pamoką, prasidedančią v valandų ir m minučių.
 
 ```c#
+
 ```
 
 3. Kai kurie keturženkliai skaičiai turi tokią savybę, (30+25)2=3025. Nustatykite, ar keturženklis skaičius N turi šią savybę.
 
 ```c#
+int keturzenklis = 3025;
+
+int duPirmiSk = keturzenklis / 100;
+int duPaskutiniaiSk = keturzenklis % 100;
+
+if(Math.Pow(duPirmiSk + duPaskutiniaiSk, 2) == keturzenklis)
+{
+    Console.WriteLine("Turi tokia savybe.");
+}
+else
+{
+    Console.WriteLine("Tokios savybes neturi.");
+}
 ```
 
 ### ```while```
@@ -25,6 +55,7 @@ Skaičius = 3, kubas = 27
 ```
 
 ```c#
+
 ```
 
 2. Slidininkas treniruotis pradėjo nušliuoždamas a km nuotolį. Kiekvieną kitą treniruotę jis įveikdavo b km daugiau. Parašykite programą, nurodančią kurią, treniruotę nušliuožtas nuotolis viršys c km. Pasitikrinkite. Jei a = 1, b = 1, c = 10, tai turi būti išvesta: 6. Jei a = 2, b = 3, c = 10, tai turi būti išvesta 4.
