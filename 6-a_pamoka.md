@@ -132,4 +132,115 @@ Console.WriteLine(dalinasIs5 + " skaiciai dalinasi is 5-iu.");
 3. Masyve įrašyti n žmonių gimimo metai. Sudarykite programą, kuri nustatytų didžiausią žmonių amžiaus skirtumą.
 Duomenys: ```1989, 1988, 2010, 2007, 1999, 1994, 1974, 1963, 1932, 1950, 1967, 2003, 2000```
 
+4. Krituliai
+
+```c#
+int[] krituliai = { 10, 20, 0, 0, 0, 45, 25, 30, 50, 25 };
+
+//1.
+
+Console.WriteLine("Krituliai (lietus)");
+Console.WriteLine("-------------------------------");
+Console.WriteLine("  Diena\tKritulių kiekis (mm)");
+Console.WriteLine("-------------------------------");
+
+for (int i = 0; i < krituliai.Length; i++)
+{
+    Console.WriteLine($"  {i + 1}\t{krituliai[i]}");
+}
+
+//2.
+int krituliuSuma = 0;
+
+foreach (var k in krituliai)
+{
+    krituliuSuma += k;
+}
+
+Console.WriteLine($"Iš viso iškrito kritulių (mm): {krituliuSuma}");
+
+//3.
+int dienuBeLietausSk = 0;
+
+foreach (var k in krituliai)
+{
+    if (k == 0)
+        dienuBeLietausSk++;
+}
+Console.WriteLine($"Nelijo (dienas): {dienuBeLietausSk}");
+
+//4.
+
+int lietinguDienuKrituliuVid = krituliuSuma / (krituliai.Length - dienuBeLietausSk);
+Console.WriteLine($"Vidutiniškai kiekvieną lietingą dieną iškrito kritulių (mm): {lietinguDienuKrituliuVid}");
+```
+
+5. Ūgiai
+
+```c#
+int[] ugiai = { -178, 175, -186, 172, 173, 175, -185, -180, -169, 165, 176, 172, -180, 176, -190, 176, -174, 177, -172, 178 };
+
+//1.
+double ugiuSuma = 0;
+
+foreach (var ugis in ugiai)
+{
+    //berniuku ugius reikia paverst i teigiamus skaicius
+    ugiuSuma += ugis < 0 ? ugis * -1 : ugis;
+}
+
+Console.WriteLine($"Klasės ūgių vidurkis (cm): {ugiuSuma/ugiai.Length}");
+//2. ir 3.
+double merginuUgiuSuma = 0;
+int merginuSk = 0;
+double vaikinuUgiuSuma = 0;
+int vaikinuSk = 0;
+
+foreach (var ugis in ugiai)
+{
+    if (ugis > 0)
+    {
+        merginuUgiuSuma += ugis;
+        merginuSk++;
+    }
+    else
+    {
+        vaikinuUgiuSuma += ugis * -1;
+        vaikinuSk++;
+    }
+}
+
+Console.WriteLine($"Merginų ūgių vidurkis (cm): {merginuUgiuSuma / merginuSk}");
+Console.WriteLine($"Vaikinų ūgių vidurkis (cm): {vaikinuUgiuSuma / vaikinuSk}");
+
+
+//4.
+
+int merginuKomanda = 0;
+int vaikinuKomanda = 0;
+
+foreach (var ugis in ugiai)
+{
+    if (ugis < 0 && ugis <= -175)
+    {
+        vaikinuKomanda++;
+    }
+    else if (ugis > 0 && ugis >= 175)
+    {
+        merginuKomanda++;
+    }
+}
+
+if (vaikinuKomanda >= 7)
+{
+    Console.WriteLine("Vaikinų komandą sudaryti pavyks.");
+}
+else Console.WriteLine("Vaikinų komandos sudaryti nepavyks.");
+
+if (merginuKomanda >= 7)
+{
+    Console.WriteLine("Merginų komandą sudaryti pavyks.");
+}
+else Console.WriteLine("Merginų komandos sudaryti nepavyks.");
+```
 
