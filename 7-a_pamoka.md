@@ -50,3 +50,4 @@ Console.WriteLine("Is viso gyventoju desinej: " + isVisoGyventojuD);
 Console.WriteLine("Vidutiniskai gyventoju kairej: " + isVisoGyventojuK/gyventojuSkK);
 Console.WriteLine("Vidutiniskai gyventoju desinej: " + isVisoGyventojuD/gyventojuSkD);
 ```
+
