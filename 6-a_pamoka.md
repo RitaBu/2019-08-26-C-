@@ -129,5 +129,7 @@ for (int i = 0; i < skaiciai.Length; i++)
 Console.WriteLine(dalinasIs5 + " skaiciai dalinasi is 5-iu.");
 ```
 
+3. Masyve įrašyti n žmonių gimimo metai. Sudarykite programą, kuri nustatytų didžiausią žmonių amžiaus skirtumą.
+Duomenys: ```1989, 1988, 2010, 2007, 1999, 1994, 1974, 1963, 1932, 1950, 1967, 2003, 2000```
 
 
