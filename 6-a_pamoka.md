@@ -132,6 +132,27 @@ Console.WriteLine(dalinasIs5 + " skaiciai dalinasi is 5-iu.");
 3. Masyve įrašyti n žmonių gimimo metai. Sudarykite programą, kuri nustatytų didžiausią žmonių amžiaus skirtumą.
 Duomenys: ```1989, 1988, 2010, 2007, 1999, 1994, 1974, 1963, 1932, 1950, 1967, 2003, 2000```
 
+```c#
+int[] gimimoMetai = { 1989, 1988, 2010, 2007, 1999, 1994, 1974, 1963, 1932, 1950, 1967, 2003, 2000 };
+
+int min = 0; //vyriausio zmogaus gimimo data
+int max = 0; //jauniausio zmogaus gimimo data
+
+for (int i = 0; i < gimimoMetai.Length; i++)
+{
+    if(gimimoMetai[i] > max)
+    {
+        max = gimimoMetai[i];
+    }
+    else if(gimimoMetai[i] < min)
+    {
+        min = gimimoMetai[i];
+    }
+}
+
+Console.WriteLine("Didziausias amziu skirtumas: " + (max - min));
+```
+
 4. Krituliai
 
 ```c#
